@@ -26,13 +26,13 @@ jobs:
             npm run frontend:install     
             - run:
                 name: Install Front-End Dependencies
-                command: npm run frontend:install
+                command: npm run frontend:install --force
             - run:
                 name: Front-End Build
                 command: npm run frontend:build
             - run:
                 name: Install Back-End Dependencies
-                command: npm run backend:install
+                command: npm run backend:install --force
             - run:
                 name: Back-End Build
                 command: npm run backend:build
