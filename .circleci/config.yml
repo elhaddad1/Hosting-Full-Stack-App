@@ -8,64 +8,27 @@ orbs:
 jobs:
   build:
     docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
-    steps:
-      # install node and checkout code
-      - node/install:
-          node-version: '14.15'         
-      - checkout
-      # Use root level package.json to install dependencies in the frontend app
-      - run:
-          name: Install Front-End Dependencies
-          command: |
-            echo "NODE --version" 
-            echo $(node --version)
-            echo "NPM --version" 
-            echo $(npm --version)
-            npm run frontend:install     
-            - run:
-                name: Install Front-End Dependencies
-                command: npm run frontend:install --force
-            - run:
-                name: Front-End Build
-                command: npm run frontend:build
-            - run:
-                name: Install Back-End Dependencies
-                command: npm run backend:install --force
-            - run:
-                name: Back-End Build
-                command: npm run backend:build
-  # deploy step will run only after manual approval
-  deploy:
-    docker:
       - image: "cimg/base:stable"
-      # more setup needed for aws, node, elastic beanstalk
     steps:
-      - node/install:
-          node-version: '14.15' 
-      - eb/setup
-      - aws-cli/setup
+      - node/install
       - checkout
+      - aws-cli/setup
+      - eb/setup
       - run:
-          name: Deploy Backend Application
+          name: Front-End Install
+          command: npm run frontend:install
+      - run:
+          name: Back-End Install
+          command: npm run backend:install
+      - run:
+          name: Front-End Build
+          command: npm run frontend:build
+      - run:
+          name: Back-End Build
+          command: npm run backend:build
+      - run:
+          name: Deploy Back-End
           command: npm run backend:deploy
       - run:
-          name: Deploy Frontend Application
+          name: Deploy Front-End
           command: npm run frontend:deploy
-            
-workflows:
-  udagram:
-    jobs:
-      - build
-      - hold:
-          filters:
-            branches:
-              only:
-                - master
-          type: approval
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
