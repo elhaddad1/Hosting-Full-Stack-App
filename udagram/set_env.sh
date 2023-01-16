@@ -1,11 +1,13 @@
 # This file is used for convenience of local development.
 # DO NOT STORE YOUR CREDENTIALS INTO GIT
-export POSTGRES_USERNAME=postgres
-export POSTGRES_PASSWORD=myPassword
-export POSTGRES_HOST=mydbinstance.csxbuclmtj3c.us-east-1.rds.amazonaws.com
-export POSTGRES_DB=postgres
-export AWS_BUCKET=arn:aws:s3:::myawsbucket-75139724085
-export AWS_REGION=us-east-1
-export AWS_PROFILE=default
-export JWT_SECRET=mysecretstring
-export URL=http://localhost:8100
+export POSTGRES_HOST="elhadad-database-postgres.cjjueppmtq7l.us-east-1.rds.amazonaws.com"
+export POSTGRES_DB="aws_store_db"
+export POSTGRES_USER="postgres"
+export POSTGRES_PASSWORD="Passw0rd12345"
+export NODE_ENV="dev"
+export PORT="5432"
+export JWT_SECRET="jllgshllWEUJHGHYJkjsfjds90"
+export AWS_REGION="us-east-1"
+export AWS_PROFILE="default"
+export AWS_BUCKET="elhadad-bucket"
+export URL="http://app1api-env.eba-2ievjpne.us-east-1.elasticbeanstalk.com/"
