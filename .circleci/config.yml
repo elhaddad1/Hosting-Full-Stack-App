@@ -21,6 +21,9 @@ jobs:
           name: Back-End Install --force
           command: npm run backend:install
       - run:
+          name: openssl-legacy-provider
+          command: export NODE_OPTIONS=--openssl-legacy-provider
+      - run:
           name: Front-End Build
           command: npm run frontend:build
       - run:
