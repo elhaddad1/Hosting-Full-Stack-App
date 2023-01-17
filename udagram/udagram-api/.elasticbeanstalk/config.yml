@@ -1,6 +1,6 @@
 branch-defaults:
   default:
-    environment: App1api-env
+    environment: App2apielh-env
     group_suffix: null
 global:
   application_name: app2-api-elh
