@@ -1,9 +1,9 @@
 branch-defaults:
   default:
-    environment: App2apielh-env
+    environment: Appapielh-env
     group_suffix: null
 global:
-  application_name: app2-api-elh
+  application_name: app-api-elh
   branch: null
   default_ec2_keyname: null
   default_platform: Node.js 16 running on 64bit Amazon Linux 2
