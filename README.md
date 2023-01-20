@@ -1,12 +1,12 @@
-# Udagram
+# Hosting-Full-Stack-App
 
-- [Udagram](#udagram)
+- [Hosting-Full-Stack-Appm](#Hosting-Full-Stack-App)
   - [Description](#description)
   - [Getting Started](#getting-started)
     - [Project Setup](#project-setup)
   - [Built With](#built-with)
   - [Documentation](#documentation)
-  - [CopyRights](#copyrights)
+  - [URL](#URL)
 
 ---
 
