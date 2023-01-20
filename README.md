@@ -44,5 +44,5 @@ The project can run but is missing some information to connect to the database a
 - Please find documests on documentation folder
 - Please find screenshot on screenshot folder
 ## URL
-- BackEnd URL: `[https://aws.amazon.com/architecture/icons/](http://appapielh-env.eba-wmpsmx52.us-east-1.elasticbeanstalk.com/api/v0)`
+- BackEnd URL: https://aws.amazon.com/architecture/icons/](http://appapielh-env.eba-wmpsmx52.us-east-1.elasticbeanstalk.com/api/v0
 - FrontEnd URL: http://elhadad-bucket.s3-website-us-east-1.amazonaws.com
